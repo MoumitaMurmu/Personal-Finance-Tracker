@@ -1,27 +1,17 @@
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Header from './Components/Header';
-import Dashboard from './pages/Dashboard';
-import Signup from './pages/Signup';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
+import SignUpSignIn from "./components/Signup";
 
 function App() {
   return (
-    <>
-    <ToastContainer/>
-   <Router>
-    <Routes>
-    <Route path='/' element={<Signup/>} />
-    <Route path='/dashboard' element={<Dashboard/>} />
-    </Routes>
-   </Router>
-   </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<SignUpSignIn/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App; 
-
-       
-   
+export default App;
